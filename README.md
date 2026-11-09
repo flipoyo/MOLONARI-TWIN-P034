@@ -50,3 +50,16 @@ molonari-twin report mon_space/twin_mcmc_sigmaT0.08 --forward MOLONARI-TWIN/Poin
 Un dev lance son propre twin avec sa graine, dans son espace de travail : il ne reçoit jamais la graine de référence, et son rapport local n'est jamais écrit dans `public_reports/`.
 
 Les paramètres de sol de `twin_direct` sont ceux de `twin_01`, non calibrés.
+
+Fichier .cgs : 
+
+```text
+project = { name = "MOLONARI1D", default_branch = "CGS-MOLO" }
+repos = [
+    { repository = "github:flipoyo/MOLONARI1D", fallback_branch = "CGS-MOLO" },
+    { repository = "github:flipoyo/MOLONARI-API", relative_path = "Molonaviz" },
+    { repository = "github:flipoyo/MOLONARI-data", relative_path = "data" },
+    { repository = "github:KeanuToofa/MOLONARI-TWIN", relative_path = "MOLONARI-TWIN" },
+]
+
+```
